@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.prevent-focus-stealing" path="/org/gnome/shell/extensions/prevent-focus-stealing/">
+        <!-- See also: https://docs.gtk.org/glib/gvariant-format-strings.html -->
+        <key name="applications-list" type="s">
+            <default>""</default>
+            <summary>Applications List</summary>
+            <description>
+                Comma seperated list of WM_CLASS names.
+                Use "xprop|grep WM_CLASS" to find the correct value to put here.
+            </description>
+        </key>
+    </schema>
+</schemalist>

@@ -1,0 +1,9 @@
+{
+  "name": "Prevent Focus Stealing",
+  "description": "Prevents new windows from stealing focus (optionally, if they match a name from a provided list)",
+  "uuid": "prevent-focus-stealing@MelonFunction.github.com",
+  "url": "https://github.com/melonfunction",
+  "shell-version": [
+    "42"
+  ]
+}
