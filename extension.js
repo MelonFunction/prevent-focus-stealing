@@ -39,17 +39,20 @@ class Extension {
             let rect = focused.get_frame_rect();
             let [x, y] = global.get_pointer();
             let mouseFocus = (x > rect.x && x < rect.x + rect.width && y > rect.y && y < rect.y + rect.height)
+            let found = false
 
             this.applicationsList.split(",").forEach((v) => {
                 log(wmclass, v, wmclass == v, mouseFocus);
                 if ((wmclass == v.trim()) && !mouseFocus) { // previous focus
                     if (this._focused && this._focused.activate) {
+                        found = true
                         this._focused.activate(global.get_current_time());
                     }
-                } else { // new focus
-                    this._focused = focused;
                 }
             })
+
+            if (!found)
+                this._focused = focused;
         }));
     }
 
